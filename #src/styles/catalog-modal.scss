@@ -1,0 +1,43 @@
+@import 'variables';
+
+
+.catalog-modal-wrapper{
+  min-height: 100vh;
+  background: rgb(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.catalog-modal{
+  width: media(350, 380);
+  height: 100vh;
+  padding: media(30, 35) media(45, 50);
+  background: $white;
+}
+.catalog-modal__list{
+  grid-row-gap: media(5, 7);
+  li{
+    padding: media(2, 4) media(4, 7);
+    grid-column-gap: media(7, 10);
+    border-radius: 5px;
+    .icon{
+      color: #989898;
+    }
+    &.active, &:hover{
+      background: #CB11AB;
+      .icon{
+        color: $white;
+      }
+      .catalog-modal__link{
+        color: $white;
+      }
+    }
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.catalog-modal__link{
+  font-size: media(16, 18);
+  font-weight: 400;
+  color: $black;
+}

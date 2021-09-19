@@ -1,0 +1,124 @@
+@import 'variables.scss';
+
+.category-product-wrapper{
+  position: relative;
+  z-index: 0;
+  &:before, &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+  }
+  &:before{
+    background: $gradientMainColor;
+    top: 0;
+  }
+  &:after{
+    background: #4B1174;
+    bottom: 0;
+  }
+}
+.category-product-content{
+  background: white;
+  border-radius: 45px;
+  > .wrapper{
+    padding: media(30, 45) 0;
+  }
+}
+.category-product-left{
+  width: 100%;
+}
+.category-product-navigation{
+  white-space: nowrap;
+  font-size: media(12, 14);
+  color: #929292;
+}
+.current-category-title{
+  font-size: media(30, 36);
+  color: $black;
+  margin: media(20, 25) 0;
+  display: block;
+}
+.categories-list-holder{
+  > h4{
+    font-size: media(16, 18);
+    margin-bottom: media(5, 10);
+  }
+}
+.categories-list{
+  li{
+    padding: media(3, 5) 4px;
+  }
+}
+.categories-list__link{
+  color: #7C7C7C;
+  font-size: media(12, 14);
+}
+.category-product-right{
+  padding-top: media(20, 30);
+}
+.category-product-slider{
+  padding: media(15, 20) 0;
+  .swiper-wrapper{
+    height: media(450, 500);
+    .swiper-slide{
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+  .swiper-pagination{
+    grid-column-gap: media(7, 10);
+    padding: media(15, 20) 0;
+    .swiper-pagination-bullet{
+      width: media(8, 12);
+      height: media(8, 12);
+      border-radius: 50%;
+      background: #C111A76B;
+      transition: 0.3s ease;
+      &.swiper-pagination-bullet-active{
+        width: media(18, 22);
+        height: media(18, 22);
+        background: #CB11AB;
+      }
+    }
+  }
+}
+.category-product-banner{
+  grid-column-gap: media(10, 15);
+  grid-row-gap: media(10, 15);
+  &.padding{
+    padding: media(15, 20) 0;
+  }
+  .banner__item{
+    height: media(200, 220);
+  }
+}
+
+.product-out.category-products-padding{
+  padding: media(30, 40) 0;
+}
+
+
+.category-products__list{
+  .swiper{
+    width: 100%;
+    .swiper-button-next{
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+      width: media(30, 35);
+      height: media(30, 35);
+      border-radius: 50%;
+      background: $white;
+      box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.25);
+      i{
+        color: $black;
+        font-size: media(13, 16);
+      }
+    }
+  }
+}

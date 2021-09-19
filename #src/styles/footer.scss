@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+
+.footer{
+  .wrapper{
+    padding: media(40, 50) 0 media(40, 50);
+  }
+}
+.footer__nav{
+  grid-column-gap: media(20, 35);
+  padding-bottom: media(15, 20);
+}
+.footer__item{
+  &.footer__item-indentation{
+    display: grid;
+    grid-row-gap: media(7, 10);
+  }
+}
+.footer__item-nav{
+  .nav-title{
+    display: block;
+    color: $white;
+    font-size: media(14, 16);
+    font-weight: 600;
+    margin-bottom: media(8, 10);
+  }
+  .nav-list{
+    display: block;
+    &.nav-list-indentation{
+      padding-top: media(7, 10);
+    }
+    li{
+      .nav-link{
+        font-size: media(12, 14);
+        font-weight: 400;
+        color: #E2E2E2;
+      }
+    }
+  }
+}
+.footer__item-img{
+  max-width: media(130, 140);
+  width: 100%;
+}
+.apple-store{
+  margin: media(10, 20) 0;
+}
+.footer__copyright{
+  padding: media(15, 20) 0;
+  > .footer__copyright-title {
+    color: $white;
+    font-size: media(12, 14);
+  }
+}

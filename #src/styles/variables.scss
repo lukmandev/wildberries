@@ -1,0 +1,8 @@
+@function media($min, $max) {
+  $different: $max - $min;
+  $result: calc(#{$min}px + #{$different} * ((100vw - 320px) / (1280 - 320)));
+  @return $result;
+}
+$gradientMainColor: linear-gradient(90deg, rgba(193,17,167,1) 0.4%, rgba(75,17,116,1) 99%);
+$white: white;
+$black: black;

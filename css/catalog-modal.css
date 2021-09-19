@@ -1,0 +1,43 @@
+.catalog-modal-wrapper {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.catalog-modal {
+  width: calc(350px + 30 * ((100vw - 320px) / (1280 - 320)));
+  height: 100vh;
+  padding: calc(30px + 5 * ((100vw - 320px) / (1280 - 320))) calc(45px + 5 * ((100vw - 320px) / (1280 - 320)));
+  background: white;
+}
+
+.catalog-modal__list {
+  grid-row-gap: calc(5px + 2 * ((100vw - 320px) / (1280 - 320)));
+}
+.catalog-modal__list li {
+  padding: calc(2px + 2 * ((100vw - 320px) / (1280 - 320))) calc(4px + 3 * ((100vw - 320px) / (1280 - 320)));
+  grid-column-gap: calc(7px + 3 * ((100vw - 320px) / (1280 - 320)));
+  border-radius: 5px;
+}
+.catalog-modal__list li .icon {
+  color: #989898;
+}
+.catalog-modal__list li.active, .catalog-modal__list li:hover {
+  background: #CB11AB;
+}
+.catalog-modal__list li.active .icon, .catalog-modal__list li:hover .icon {
+  color: white;
+}
+.catalog-modal__list li.active .catalog-modal__link, .catalog-modal__list li:hover .catalog-modal__link {
+  color: white;
+}
+.catalog-modal__list li img {
+  width: 20px;
+  height: 20px;
+}
+
+.catalog-modal__link {
+  font-size: calc(16px + 2 * ((100vw - 320px) / (1280 - 320)));
+  font-weight: 400;
+  color: black;
+}
